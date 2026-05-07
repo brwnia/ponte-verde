@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -37,22 +38,61 @@ nav{
     background-color: #fff;
 }
 .logo{
-    display: flex;
+
 }
 .nav-links{
-
+    display: flex;
+    gap: 28px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
 }
-.ativo{
-
+.nav-links a{
+    color: #aaa;
+    transition: color 0.2s;
+}
+.nav-links a:hover{
+    color: var(--verde-musgo);
+}
+.nav-links a.ativo{
+    color: var(--verde-musgo);
+    font-weight: 600;
+    border-bottom: 2px solid var(--verde-musgo);
+    padding-bottom: 2px;
 }
 .nav-botoes{
-
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .btn-cadastro{
-
+    background-color: var(--verde-escuro);
+    color: #fff;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-cadastro:hover{
+    background-color: var(--verde-medio);
 }
 .btn-entrar{
-
+    background: #fff;
+    color: var(--verde-musgo);
+    border: 1.5px solid var(--verde-musgo);
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Inter", sans-serif;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-entrar:hover{
+    background: var(--verde-fundo);
 }
 .banner{
 
