@@ -64,7 +64,7 @@ nav{
     align-items: center;
     gap: 10px;
 }
-.btn-cadastro{
+.btn-primario{
     background-color: var(--verde-escuro);
     color: #fff;
     border: none;
@@ -76,10 +76,10 @@ nav{
     cursor: pointer;
     transition: background 0.2s;
 }
-.btn-cadastro:hover{
+.btn-primario:hover{
     background-color: var(--verde-medio);
 }
-.btn-entrar{
+.btn-secundario{
     background: #fff;
     color: var(--verde-musgo);
     border: 1.5px solid var(--verde-musgo);
@@ -91,17 +91,41 @@ nav{
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
 }
-.btn-entrar:hover{
+.btn-secundario:hover{
     background: var(--verde-fundo);
 }
 .banner{
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 380px;
+    background-color: var(--verde-fundo);
 }
 .banner-texto{
-
+    padding: 60px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+}
+.banner-texto h1{
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--verde-musgo);
+    line-height: 1.15;
+    max-width: 380px;
+}
+.banner-texto p{
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    color: var(--cinza-texto);
+    line-height: 1.7;
+    max-width: 380px;
 }
 .banner-botoes{
-
+    display: flex;
+    gap: 14px;
+    margin-top: 6px;
 }
 .btn-produtor{
 
