@@ -137,7 +137,12 @@ nav{
 
 }
 .banner-imagem{
-
+    background: var(--verde-medio);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 .quadrado-estatisticas{
 
