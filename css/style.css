@@ -200,7 +200,7 @@ nav{
 }
 .grid-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 18px;
 }
 .card{
@@ -208,6 +208,8 @@ nav{
       border: 1px solid var(--verde-borda);
       border-radius: 12px;
       overflow: hidden;
+      min-width: 0; 
+      word-break: break-word;
       text-align: left;
       transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -215,25 +217,101 @@ nav{
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(2,67,38,0.1);
 }
-.card-corpo{
+.card-topo{
     height: 130px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 54px;
 }
-.btn-card-comprador{
-
+.card-topo.verde-1{
+    background: #deebd8;
 }
-.btn-card-vendedor{
-
+    .card-topo.verde-2 { 
+        background: #d0e5d0; 
+}
+    .card-topo.verde-3 {
+    background: #eaebcc; 
+}
+    .card-topo.verde-4 {
+        background: #fde8d4; 
+}
+.card-corpo{
+padding: 16px;
+}
+.card-corpo h3{
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--verde-musgo);
+    margin-bottom: 8px;
+}
+.card-corpo p{
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+.btn-card-primario {
+    background: var(--verde-escuro);
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-card-primario:hover {
+    background: var(--verde-medio);
+}
+.btn-card-secundario {
+    background: transparent;
+    color: var(--verde-musgo);          /* #024326 */
+    border: 1.5px solid var(--verde-musgo);
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;                   /* Inter Medium */
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.btn-card-secundario:hover {
+    background: var(--verde-fundo);
+}
+.rodape{
+    background-color: var(--cinza-claro);
+    padding: 32px 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 .feature{
-
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
 }
 .feature-icone{
-
+    font-size: 26px;
+    margin-top: 2px;
+    flex-shrink: 0;
 }
-.feature-texto{
-
+.feature-texto h4{
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--verde-musgo);
+    margin-bottom: 4px;
+}
+.feature-texto p{
+    font-family: "Inter",sans-serif;
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
 }
