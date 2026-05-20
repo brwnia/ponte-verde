@@ -121,6 +121,7 @@ nav {
     font-weight: 800;
     color: var(--verde-musgo);
     line-height: 1.2;
+    margin-bottom: 60px;
 }
 .qs-texto p {
     font-size: 15px;
@@ -157,15 +158,16 @@ nav {
     margin: 0;
 }
 .qs-imagem {
-    position:static;
+    position: relative;
     border-radius: 16px;
     overflow: hidden;
-    aspect-ratio: 4 / 4;   /* mantém proporção fixa */
+    margin-left: 120px;
+    aspect-ratio: 2.9 / 3.5;   /* mantém proporção fixa */
 }
 .qs-imagem img {
     width: 100%;
     object-fit: cover;
-    display: block;
+    display: 
 }
 .mvv {
     background: var(--cinza-claro);
@@ -234,13 +236,13 @@ nav {
 .nh-texto {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 50px;
 }
 .nh-texto h2 {
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 800;
     color: var(--verde-musgo);
-    line-height: 1.2;
+    line-height: 1.4;
 }
 .nh-texto p {
     font-size: 15px;
@@ -251,6 +253,7 @@ nav {
     font-weight: 700;
     color: var(--verde-musgo);
     font-size: 15px;
+    margin-top: 50px;
 }
 .nh-visual {
     position: relative;
@@ -264,10 +267,11 @@ nav {
     object-fit: cover;
     display: block;
     border-radius: 14px;
+    aspect-ratio: 2.8 / 3.5;
 }
 .citacao {
     position: absolute;
-    bottom: -20px;
+    bottom: -10px;
     right: -20px;
     background: var(--verde-escuro);
     color: #fff;
@@ -277,10 +281,9 @@ nav {
 }
 .citacao .aspas {
     font-size: 32px;
-    line-height: 1;
     color: var(--verde-oliva);
     font-family: Georgia, serif;
-    margin-bottom: 8px;
+    margin-bottom: 1px;
 }
 .citacao p {
     font-size: 13px;
