@@ -9,6 +9,8 @@ const mensagemCounter = document.getElementById("mensagemCounter");
 const successMessage = document.getElementById("successMessage");
 const limiteMensagem = 500;
 
+// ================= MOSTRAR ERRO =================
+
 function mostrarErro(campo, mensagemErro) {
   const errorElement = document.getElementById(campo.id + "Error");
 
@@ -17,6 +19,8 @@ function mostrarErro(campo, mensagemErro) {
   campo.classList.add("is-invalid");
 }
 
+// ================= LIMPAR ERRO =================
+
 function limparErro(campo) {
   const errorElement = document.getElementById(campo.id + "Error");
 
@@ -24,6 +28,8 @@ function limparErro(campo) {
   errorElement.innerText = "";
   campo.classList.remove("is-invalid");
 }
+
+// ================= CONTADOR MENSAGEM =================
 
 function atualizarContadorMensagem() {
   const totalCaracteres = mensagem.value.length;
@@ -36,6 +42,8 @@ function atualizarContadorMensagem() {
     totalCaracteres > limiteMensagem
   );
 }
+
+// ================= VALIDAR NOME =================
 
 function validarNome(nomeTexto) {
   const partesNome = nomeTexto.trim().split(/\s+/);
@@ -55,16 +63,22 @@ function validarNome(nomeTexto) {
   );
 }
 
+// ================= VALIDAR EMAIL =================
+
 function validarEmail(emailTexto) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   return regex.test(emailTexto.trim());
 }
 
+// ================= VALIDAR CAMPOS =================
+
 function validarFormulario() {
   let valido = true;
 
   [nome, email, assunto, mensagem].forEach((campo) => limparErro(campo));
+
+  // ================= NOME =================
 
   if (nome.value.trim() === "") {
     mostrarErro(nome, "O nome completo \u00E9 obrigat\u00F3rio.");
@@ -77,6 +91,8 @@ function validarFormulario() {
     valido = false;
   }
 
+  // ================= EMAIL =================
+
   if (email.value.trim() === "") {
     mostrarErro(email, "O e-mail \u00E9 obrigat\u00F3rio.");
     valido = false;
@@ -85,10 +101,14 @@ function validarFormulario() {
     valido = false;
   }
 
+  // ================= ASSUNTO =================
+
   if (assunto.value === "") {
     mostrarErro(assunto, "Selecione um assunto.");
     valido = false;
   }
+
+  // ================= MENSAGEM =================
 
   if (mensagem.value.trim() === "") {
     mostrarErro(mensagem, "A mensagem \u00E9 obrigat\u00F3ria.");
@@ -100,6 +120,8 @@ function validarFormulario() {
 
   return valido;
 }
+
+// ================= ENVIO FORM =================
 
 if (form && nome && email && assunto && mensagem && mensagemCounter) {
   mensagem.addEventListener("input", atualizarContadorMensagem);
