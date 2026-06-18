@@ -179,3 +179,37 @@ form.addEventListener("submit", function (e) {
   }
 
 });
+
+  // ================= CALCULO DE RECEITA =================
+
+function calcularReceita(){
+
+  const quantidade =
+    parseFloat(document.getElementById("quantidade").value) || 0;
+
+  const preco =
+    parseFloat(document.getElementById("preco").value) || 0;
+
+  const receitaBruta = quantidade * preco;
+  const taxa = receitaBruta * 0.05;
+  const receitaLiquida = receitaBruta - taxa;
+
+  document.getElementById("receitaBruta").innerHTML =
+    receitaBruta.toLocaleString("pt-BR",{
+      style:"currency",
+      currency:"BRL"
+    });
+
+  document.getElementById("taxa").innerHTML =
+    taxa.toLocaleString("pt-BR",{
+      style:"currency",
+      currency:"BRL"
+    });
+
+  document.getElementById("receitaLiquida").innerHTML =
+    receitaLiquida.toLocaleString("pt-BR",{
+      style:"currency",
+      currency:"BRL"
+    });
+
+}
