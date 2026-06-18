@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponte Verde</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style-compradores.css">
+        <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="assets/img/logoPonteVerde.png">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container">
+
+        <a class="navbar-brand" href="./home.html">
+            <div class="logo-circle">
+                <img src="assets/img/logoPonteVerde.png" alt="Logo">
+            </div>
+            <span>Ponte Verde</span>
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+            <ul class="navbar-nav mx-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" href="./home.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./sobre.html">Sobre Nós</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./produtores.html">Produtor</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link active" href="./compradores.html">Comprador</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="./faleconosco.html">Fale Conosco</a>
+            </li>
+
+            </ul>
+
+            <div class="d-flex align-items-center gap-3 header-actions">
+
+            <button class="search-btn">
+                <i class="bi bi-search"></i>
+            </button>
+
+            <button class="btn btn-register">
+                Cadastre-se
+            </button>
+
+            <button class="btn btn-login">
+                Entrar
+            </button>
+
+            </div>
+
+        </div>
+        </div>
+    </nav>
+
+   <section class="banner-principal container">
+  <div class="banner-principal-conteudo">
+    <div class="banner-principal-texto">
+      <span class="tag-banner-principal">DO CAMPO PARA SUA MESA</span>
+
+      <h1>
+        Conectamos você direto ao produtor da <span>sua região</span>
+      </h1>
+
+      <p>
+        Mais frescor, mais qualidade e mais impacto positivo para o campo e para a sua comunidade.
+      </p>
+
+      <div class="banner-principal-botoes">
+        <button class="btn-comprar" id="btnComprar">Comprar agora <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+        <button class="btn-produtores">Conheça os produtores</button>
+      </div>
+
+      <div class="beneficios">
+        <div class="beneficio-item">
+          <span class="icone"><i class="bi bi-flower1" aria-hidden="true"></i></span>
+          <div>
+            <h6>Direto do produtor</h6>
+            <span>Sem intermediários</span>
+          </div>
+        </div>
+
+        <div class="beneficio-item">
+          <span class="icone"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></span>
+          <div>
+            <h6>Da sua região</h6>
+            <span>Fortalece a economia local</span>
+          </div>
+        </div>
+
+        <div class="beneficio-item">
+          <span class="icone"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
+          <div>
+            <h6>Mais qualidade</h6>
+            <span>Produtos frescos e seguros</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="banner-principal-imagem">
+      <img src="assets/img/bannercomprador.jpeg" class="banner-principal-img" alt="Produtor segurando uma caixa com legumes frescos">
+
+      <div class="card-info">
+        <span class="card-info-selo"><i class="bi bi-flower1" aria-hidden="true"></i></span>
+        <h5>Ao comprar aqui, você:</h5>
+
+        <div class="card-info-itens">
+          <div class="info-item">
+            <i class="bi bi-people" aria-hidden="true"></i>
+            <p>Apoia pequenos produtores</p>
+          </div>
+
+          <div class="info-item">
+            <i class="bi bi-flower1" aria-hidden="true"></i>
+            <p>Gera renda no campo</p>
+          </div>
+
+          <div class="info-item">
+            <i class="bi bi-globe-americas" aria-hidden="true"></i>
+            <p>Reduz impactos ambientais</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section class="categorias">
+  <div class="categorias-cabecalho">
+    <h2>Compre por categoria</h2>
+    <a href="#">Ver todas <i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+  </div>
+
+  <div class="categorias-lista">
+    <div class="categoria-card">
+      <div class="categoria-imagem">
+        <img src="assets/img/hortaliças.jpeg" alt="Hortaliças">
+      </div>
+      <h3>Hortaliças</h3>
+    </div>
+
+    <div class="categoria-card">
+      <div class="categoria-imagem">
+        <img src="assets/img/frutas.jpeg" alt="Frutas">
+      </div>
+      <h3>Frutas</h3>
+    </div>
+
+    <div class="categoria-card">
+      <div class="categoria-imagem">
+        <img src="assets/img/laticinios.jpeg" alt="Laticínios">
+      </div>
+      <h3>Laticínios</h3>
+    </div>
+
+    <div class="categoria-card">
+      <div class="categoria-imagem">
+        <img src="assets/img/carnes.jpeg" alt="Carnes">
+      </div>
+      <h3>Carnes</h3>
+    </div>
+
+    <div class="categoria-card">
+      <div class="categoria-imagem">
+        <img src="assets/img/grãos.jpeg" alt="Grãos e cereais">
+      </div>
+      <h3>Grãos e Cereais</h3>
+    </div>
+
+    <div class="categoria-card">
+      <div class="categoria-imagem">
+        <img src="assets/img/artesanais.jpeg" alt="Artesanais">
+      </div>
+      <h3>Artesanais</h3>
+    </div>
+
+    <div class="categoria-card">
+      <div class="categoria-imagem">
+        <img src="assets/img/kits.jpeg" alt="Kits e Cestas">
+      </div>
+      <h3>Kits e Cestas</h3>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTORES -->
+<section class="container produtores">
+  <h2>Produtores em destaque</h2>
+
+  <div class="row mt-4 g-4">
+
+    <div class="col-md-4">
+      <div class="card produtor-card">
+        <img src="assets/img/criacaogalina.jpeg" alt="Produtor rural">
+        <div class="card-body">
+          <h5>Sítio Boa Terra</h5>
+          <p>12 km • <i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card produtor-card">
+        <img src="assets/img/plantacaofruta.jpeg" alt="Fazenda no campo">
+        <div class="card-body">
+          <h5>Fazenda São José</h5>
+          <p>18 km • <i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card produtor-card">
+        <img src="assets/img/plantacao.jpeg" alt="Fazenda no campo">
+        <div class="card-body">
+          <h5>Carlos Santos Produtor</h5>
+          <p>10 km <i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
