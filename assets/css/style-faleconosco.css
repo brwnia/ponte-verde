@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "./style-common.css";
 
 body {
   font-family: "Segoe UI", sans-serif;
@@ -14,111 +8,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-/* ================= HEADER ================= */
-
-.navbar-custom {
-  background: #fff;
-  padding: 18px 0;
-  border-bottom: 1px solid #ececec;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 2rem;
-  font-weight: 700;
-  color: #173f2d !important;
-}
-
-.logo-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.logo-circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.nav-item {
-  text-wrap: nowrap;
-}
-
-.nav-link {
-  color: #173f2d !important;
-  font-weight: 600;
-  margin: 0 12px;
-  position: relative;
-  transition: 0.3s;
-}
-
-.nav-link:hover {
-  color: #2f7a4f !important;
-}
-
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: #3d8c5b;
-  border-radius: 50px;
-}
-
-.search-btn {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: none;
-  background: #f2f5f2;
-  color: #173f2d;
-  transition: 0.3s;
-}
-
-.search-btn:hover {
-  background: #e4ece6;
-}
-
-.btn-register {
-  background: #1f5f3d;
-  color: white;
-  border-radius: 14px;
-  padding: 12px 28px;
-  font-weight: 600;
-  border: none;
-  transition: 0.3s;
-  text-wrap: nowrap;
-}
-
-.btn-register:hover {
-  background: #174a30;
-  color: white;
-}
-
-.btn-login {
-  border: 2px solid #1f5f3d;
-  color: #1f5f3d;
-  border-radius: 14px;
-  padding: 10px 28px;
-  font-weight: 600;
-  background: transparent;
-  transition: 0.3s;
-}
-
-.btn-login:hover {
-  background: #1f5f3d;
-  color: white;
 }
 
 /* ================= MAIN ================= */
@@ -323,44 +212,4 @@ footer {
   font-size: 0.95rem;
 }
 
-/* ================= RESPONSIVO ================= */
 
-@media (max-width: 991px) {
-
-  .navbar-nav {
-    margin-top: 25px;
-    text-align: center;
-  }
-
-  .header-actions {
-    margin-top: 25px;
-    justify-content: center;
-  }
-
-  .nav-link.active::after {
-    display: none;
-  }
-
-  .hero-title {
-    font-size: 2.3rem;
-  }
-
-  .left-content {
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 576px) {
-
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .contact-card {
-    padding: 25px;
-  }
-
-  .navbar-brand {
-    font-size: 1.5rem;
-  }
-}
