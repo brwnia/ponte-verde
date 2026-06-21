@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: #1a1a1a;
   background: #ffffff;
 }
@@ -70,6 +70,10 @@ h4 {
       object-fit: cover;
     }
 
+    .nav-item {
+      text-wrap: nowrap;
+    }
+
     .nav-link {
       color: #173f2d !important;
       font-weight: 600;
@@ -115,6 +119,7 @@ h4 {
       font-weight: 600;
       border: none;
       transition: 0.3s;
+      text-wrap: nowrap;
     }
 
     .btn-register:hover {
@@ -533,11 +538,31 @@ h4 {
   opacity: 0.85;
 }
 
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+    nav { flex-direction: column; gap: 12px; padding: 16px 20px; }
+}
+
 @media(max-width: 991px) {
-  nav {
-    gap: 18px;
-    padding: 14px 22px;
-    flex-wrap: wrap;
+  .navbar-nav {
+    margin-top: 25px;
+    text-align: center;
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+  
+  .header-actions {
+    margin-top: 25px;
+    justify-content: center;
   }
 
   .banner-principal.container {
@@ -590,17 +615,6 @@ h4 {
 }
 
 @media(max-width: 640px) {
-  .nav-links,
-  .nav-botoes {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .nav-links {
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
   .banner-principal-texto h1 {
     font-size: 28px;
   }
@@ -650,5 +664,9 @@ h4 {
   .categoria-imagem {
     width: 84px;
     height: 84px;
+  }
+
+  section.produtores {
+    padding: 50px 22px;
   }
 }
