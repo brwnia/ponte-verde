@@ -1,10 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import "./style-common.css";
+
 body{
-    font-family: 'Inter', sans-serif;
+    font-family: "Segoe UI", sans-serif;
     color: #1a1a1a;
     background: #fff;
 }
@@ -16,117 +13,6 @@ a {
     text-decoration: none; 
     color: inherit; 
 }
-:root {
-    --verde-medio:  #4F7546;
-    --verde-escuro: #112920;
-    --verde-oliva:  #A1A742;
-    --verde-musgo:  #024326;
-    --laranja:      #EB8B51;
-    --bege:         #D7D9A2;
-    --verde-fundo:  #f0f5ee;
-    --verde-borda:  #c5d5c0;
-    --cinza-texto:  #4a4a4a;
-    --cinza-claro:  #f7f8f3;
-}
-    /* ================= HEADER ================= */
-
-   .navbar-custom {
-      background: #fff;
-      padding: 18px 0;
-      border-bottom: 1px solid #ececec;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #173f2d !important;
-    }
-
-    .logo-circle {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-
-    .logo-circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .nav-link {
-      color: #173f2d !important;
-      font-weight: 600;
-      margin: 0 12px;
-      position: relative;
-      transition: 0.3s;
-    }
-
-    .nav-link:hover {
-      color: #2f7a4f !important;
-    }
-
-    .nav-link.active::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: #3d8c5b;
-      border-radius: 50px;
-    }
-
-    .search-btn {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      border: none;
-      background: #f2f5f2;
-      color: #173f2d;
-      transition: 0.3s;
-    }
-
-    .search-btn:hover {
-      background: #e4ece6;
-    }
-
-    .btn-register {
-      background: #1f5f3d;
-      color: white;
-      border-radius: 14px;
-      padding: 12px 28px;
-      font-weight: 600;
-      border: none;
-      transition: 0.3s;
-    }
-
-    .btn-register:hover {
-      background: #174a30;
-      color: white;
-    }
-
-    .btn-login {
-      border: 2px solid #1f5f3d;
-      color: #1f5f3d;
-      border-radius: 14px;
-      padding: 10px 28px;
-      font-weight: 600;
-      background: transparent;
-      transition: 0.3s;
-    }
-
-    .btn-login:hover {
-      background: #1f5f3d;
-      color: white;
-    }
 
 .btn-primario{
     background-color: var(--verde-escuro);
@@ -496,43 +382,75 @@ a {
 .btn-cta:hover { 
     background: var(--verde-oliva); 
 }
+
+/* ================= RESPONSIVO ================= */
+
 @media (max-width: 900px) {
-      .quem-somos, .nossa-historia {
-        grid-template-columns: 1fr;
-        padding: 40px 24px;
-        gap: 32px;
-      }
-      .mvv {
-        grid-template-columns: 1fr;
-        padding: 40px 24px;
-      }
-      .impacto {
-        padding: 40px 24px;
-      }
-      .impacto-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .nosso-time {
-        padding: 40px 24px;
-      }
-      .time-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-      .cta-banner {
-        flex-direction: column;
-        padding: 28px 24px;
-        text-align: center;
-      }
-      .citacao {
-        position: static;
-        margin-top: 16px;
-        max-width: 100%;
-      }
-      nav { flex-direction: column; gap: 12px; padding: 16px 20px; }
-      .nav-links { flex-wrap: wrap; justify-content: center; gap: 14px; }
+    .quem-somos, .nossa-historia {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
+    gap: 32px;
     }
-    @media (max-width: 480px) {
-      .impacto-grid { grid-template-columns: 1fr; }
-      .time-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); 
+    .mvv {
+    grid-template-columns: 1fr;
+    padding: 40px 24px;
     }
+    .impacto {
+    padding: 40px 24px;
+    }
+    .impacto-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .nosso-time {
+    padding: 40px 24px;
+    }
+    .time-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .cta-banner {
+    flex-direction: column;
+    padding: 28px 24px;
+    text-align: center;
+    }
+    .citacao {
+    position: static;
+    margin-top: 16px;
+    max-width: 100%;
+    }
+    .nav-links { flex-wrap: wrap; justify-content: center; gap: 14px; }
+}
+
+@media (max-width: 480px) {
+    .impacto-grid { grid-template-columns: 1fr; }
+    .time-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+}
+
+@media (max-width: 576px) {
+  .qs-texto h1 {
+    margin-bottom: 1rem;
+  }
+
+  .qs-texto .destaque-box {
+    margin-top: 1rem;
+  }
+
+  .qs-imagem {
+    margin-left: 0;
+  }
+
+  .qs-imagem img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .nh-texto {
+    gap: 20px;
+  }
+
+  .nh-texto > .frase-destaque {
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
 }

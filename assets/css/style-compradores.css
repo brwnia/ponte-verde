@@ -1,26 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --verde-medio: #4F7546;
-  --verde-escuro: #112920;
-  --verde-oliva: #A1A742;
-  --verde-musgo: #024326;
-  --laranja: #EB8B51;
-  --bege: #D7D9A2;
-  --verde-fundo: #f0f5ee;
-  --verde-borda: #c5d5c0;
-  --cinza-texto: #4a4a4a;
-  --cinza-claro: #f7f8f3;
-}
+@import "./style-common.css";
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   color: #1a1a1a;
   background: #ffffff;
 }
@@ -30,112 +11,7 @@ a {
   color: inherit;
 }
 
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Poppins", sans-serif;
-}
-
-    /* ================= HEADER ================= */
-
-    .navbar-custom {
-      background: #fff;
-      padding: 18px 0;
-      border-bottom: 1px solid #ececec;
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #173f2d !important;
-    }
-
-    .logo-circle {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-
-    .logo-circle img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .nav-link {
-      color: #173f2d !important;
-      font-weight: 600;
-      margin: 0 12px;
-      position: relative;
-      transition: 0.3s;
-    }
-
-    .nav-link:hover {
-      color: #2f7a4f !important;
-    }
-
-    .nav-link.active::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      background: #3d8c5b;
-      border-radius: 50px;
-    }
-
-    .search-btn {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      border: none;
-      background: #f2f5f2;
-      color: #173f2d;
-      transition: 0.3s;
-    }
-
-    .search-btn:hover {
-      background: #e4ece6;
-    }
-
-    .btn-register {
-      background: #1f5f3d;
-      color: white;
-      border-radius: 14px;
-      padding: 12px 28px;
-      font-weight: 600;
-      border: none;
-      transition: 0.3s;
-    }
-
-    .btn-register:hover {
-      background: #174a30;
-      color: white;
-    }
-
-    .btn-login {
-      border: 2px solid #1f5f3d;
-      color: #1f5f3d;
-      border-radius: 14px;
-      padding: 10px 28px;
-      font-weight: 600;
-      background: transparent;
-      transition: 0.3s;
-    }
-
-    .btn-login:hover {
-      background: #1f5f3d;
-      color: white;
-    }
+/* ================= PAGE-SPECIFIC STYLES ================= */
 
 
 .logo {
@@ -533,13 +409,9 @@ h4 {
   opacity: 0.85;
 }
 
-@media(max-width: 991px) {
-  nav {
-    gap: 18px;
-    padding: 14px 22px;
-    flex-wrap: wrap;
-  }
+/* ================= RESPONSIVO ================= */
 
+@media(max-width: 991px) {
   .banner-principal.container {
     background: #fff;
   }
@@ -590,17 +462,6 @@ h4 {
 }
 
 @media(max-width: 640px) {
-  .nav-links,
-  .nav-botoes {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .nav-links {
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
   .banner-principal-texto h1 {
     font-size: 28px;
   }
@@ -650,5 +511,9 @@ h4 {
   .categoria-imagem {
     width: 84px;
     height: 84px;
+  }
+
+  section.produtores {
+    padding: 50px 22px;
   }
 }
