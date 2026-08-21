@@ -409,6 +409,377 @@ a {
   opacity: 0.85;
 }
 
+/* ================= COTACAO ================= */
+
+.cotacao-section {
+  background: #f4f8ef;
+  border-top: 1px solid #e4eadc;
+  border-bottom: 1px solid #e4eadc;
+  padding: 44px 40px;
+}
+
+.cotacao-container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.cotacao-cabecalho {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.tag-cotacao {
+  display: inline-flex;
+  width: fit-content;
+  background: #e2edcf;
+  color: #557a25;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.cotacao-cabecalho h2 {
+  margin: 10px 0 8px;
+  color: #0b3a27;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.cotacao-cabecalho p {
+  max-width: 620px;
+  margin: 0;
+  color: #5f635f;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.btn-limpar-cotacao {
+  min-height: 40px;
+  border: 1px solid #cfe0c4;
+  border-radius: 6px;
+  background: #fff;
+  color: #0d5b31;
+  padding: 9px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-limpar-cotacao:hover {
+  background: #eef5e3;
+}
+
+.cotacao-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+.produtos-cotacao {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.produto-cotacao-card {
+  display: grid;
+  grid-template-columns: 132px minmax(0, 1fr);
+  gap: 14px;
+  background: #fff;
+  border: 1px solid #dde8d5;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 156px;
+}
+
+.produto-cotacao-img {
+  width: 132px;
+  height: 132px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #eef5e3;
+}
+
+.produto-cotacao-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.produto-cotacao-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.produto-categoria {
+  color: #6a9f2f;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.produto-cotacao-info h3 {
+  margin: 6px 0 4px;
+  color: #123d2a;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.produto-cotacao-info p {
+  margin: 0;
+  color: #656b66;
+  font-size: 13px;
+}
+
+.produto-cotacao-rodape {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.produto-cotacao-rodape strong {
+  color: #0b3a27;
+  font-size: 15px;
+}
+
+.btn-adicionar-cotacao {
+  min-height: 36px;
+  border: 1px solid #107533;
+  border-radius: 6px;
+  background: #107533;
+  color: #fff;
+  padding: 7px 11px;
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.btn-adicionar-cotacao:hover {
+  background: #0b5f29;
+  border-color: #0b5f29;
+}
+
+.resumo-cotacao {
+  position: sticky;
+  top: 18px;
+  background: #fff;
+  border: 1px solid #d7e5c5;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.resumo-cotacao-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #edf2e8;
+}
+
+.resumo-cotacao-topo span {
+  color: #6a6f69;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.resumo-cotacao-topo h3 {
+  margin: 3px 0 0;
+  color: #123d2a;
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.resumo-cotacao-topo i {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: #e8f4ec;
+  color: #2f7a4f;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.lista-cotacao {
+  display: grid;
+  gap: 12px;
+  min-height: 112px;
+  margin: 16px 0;
+}
+
+.cotacao-vazia {
+  min-height: 112px;
+  border: 1px dashed #cfe0c4;
+  border-radius: 8px;
+  color: #6a6f69;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 18px;
+}
+
+.cotacao-vazia i {
+  color: #6a9f2f;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.cotacao-vazia p {
+  margin: 8px 0 0;
+  max-width: 210px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.item-cotacao {
+  border: 1px solid #edf2e8;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.item-cotacao-topo {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.item-cotacao h4 {
+  margin: 0;
+  color: #123d2a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.item-cotacao p {
+  margin: 3px 0 0;
+  color: #656b66;
+  font-size: 12px;
+}
+
+.btn-remover-cotacao {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  border: none;
+  border-radius: 6px;
+  background: #f3f5f0;
+  color: #637065;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-remover-cotacao:hover {
+  background: #fff0f0;
+  color: #b42318;
+}
+
+.item-cotacao-controles {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.item-cotacao-controles label {
+  color: #637065;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.quantidade-cotacao {
+  width: 100%;
+  height: 36px;
+  margin-top: 4px;
+  border: 1px solid #dbe6d5;
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: #123d2a;
+  font-weight: 700;
+}
+
+.subtotal-cotacao {
+  color: #0b3a27;
+  font-size: 14px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.total-cotacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid #edf2e8;
+}
+
+.total-cotacao span {
+  color: #637065;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.total-cotacao strong {
+  color: #0b3a27;
+  font-size: 22px;
+}
+
+.btn-enviar-cotacao {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid #107533;
+  border-radius: 6px;
+  background: #107533;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-enviar-cotacao:hover:not(:disabled) {
+  background: #0b5f29;
+  border-color: #0b5f29;
+}
+
+.btn-enviar-cotacao:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.cotacao-feedback {
+  display: none;
+  margin-top: 12px;
+  border-radius: 6px;
+  background: #e8f7ee;
+  color: #146c43;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
 /* ================= RESPONSIVO ================= */
 
 @media(max-width: 991px) {
@@ -458,6 +829,23 @@ a {
 
   .categorias-lista {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .cotacao-section {
+    padding: 36px 22px;
+  }
+
+  .cotacao-cabecalho {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cotacao-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .resumo-cotacao {
+    position: static;
   }
 }
 
@@ -511,6 +899,30 @@ a {
   .categoria-imagem {
     width: 84px;
     height: 84px;
+  }
+
+  .produtos-cotacao {
+    grid-template-columns: 1fr;
+  }
+
+  .produto-cotacao-card {
+    grid-template-columns: 96px minmax(0, 1fr);
+    min-height: 120px;
+  }
+
+  .produto-cotacao-img {
+    width: 96px;
+    height: 96px;
+  }
+
+  .produto-cotacao-rodape {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .btn-adicionar-cotacao {
+    width: 100%;
+    justify-content: center;
   }
 
   section.produtores {

@@ -220,6 +220,128 @@
   </div>
 </section>
 
+<!-- COTACAO -->
+<section class="cotacao-section" id="cotacao">
+  <div class="cotacao-container">
+    <div class="cotacao-cabecalho">
+      <div>
+        <span class="tag-cotacao">COTACAO RAPIDA</span>
+        <h2>Monte sua cotacao com produtores locais</h2>
+        <p>Escolha os produtos, ajuste as quantidades e envie uma solicitacao simulada para os produtores parceiros.</p>
+      </div>
+      <button class="btn-limpar-cotacao" id="limparCotacao" type="button">
+        <i class="bi bi-arrow-counterclockwise" aria-hidden="true"></i>
+        Limpar cotacao
+      </button>
+    </div>
+
+    <div class="cotacao-layout">
+      <div class="produtos-cotacao" id="produtosCotacao">
+        <article class="produto-cotacao-card" data-id="cenoura" data-nome="Cenoura Organica" data-produtor="Sitio Boa Terra" data-preco="12.9" data-unidade="kg">
+          <div class="produto-cotacao-img">
+            <img src="assets/img/cenoura.jpg" alt="Cenoura organica">
+          </div>
+          <div class="produto-cotacao-info">
+            <span class="produto-categoria">Hortalicas</span>
+            <h3>Cenoura Organica</h3>
+            <p>Sitio Boa Terra</p>
+            <div class="produto-cotacao-rodape">
+              <strong>R$ 12,90/kg</strong>
+              <button class="btn-adicionar-cotacao" type="button">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="produto-cotacao-card" data-id="tomate" data-nome="Tomate Italiano" data-produtor="Carlos Santos Produtor" data-preco="8.5" data-unidade="kg">
+          <div class="produto-cotacao-img">
+            <img src="assets/img/tomate.jpg" alt="Tomate italiano">
+          </div>
+          <div class="produto-cotacao-info">
+            <span class="produto-categoria">Hortifruti</span>
+            <h3>Tomate Italiano</h3>
+            <p>Carlos Santos Produtor</p>
+            <div class="produto-cotacao-rodape">
+              <strong>R$ 8,50/kg</strong>
+              <button class="btn-adicionar-cotacao" type="button">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="produto-cotacao-card" data-id="maca" data-nome="Maca Fuji" data-produtor="Fazenda Sao Jose" data-preco="15" data-unidade="kg">
+          <div class="produto-cotacao-img">
+            <img src="assets/img/maca.jpg" alt="Maca Fuji">
+          </div>
+          <div class="produto-cotacao-info">
+            <span class="produto-categoria">Frutas</span>
+            <h3>Maca Fuji</h3>
+            <p>Fazenda Sao Jose</p>
+            <div class="produto-cotacao-rodape">
+              <strong>R$ 15,00/kg</strong>
+              <button class="btn-adicionar-cotacao" type="button">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="produto-cotacao-card" data-id="cesta" data-nome="Cesta Organica Mista" data-produtor="Cooperativa Verde" data-preco="58" data-unidade="un">
+          <div class="produto-cotacao-img">
+            <img src="assets/img/kits.jpeg" alt="Cesta organica mista">
+          </div>
+          <div class="produto-cotacao-info">
+            <span class="produto-categoria">Kits e Cestas</span>
+            <h3>Cesta Organica Mista</h3>
+            <p>Cooperativa Verde</p>
+            <div class="produto-cotacao-rodape">
+              <strong>R$ 58,00/un</strong>
+              <button class="btn-adicionar-cotacao" type="button">
+                <i class="bi bi-plus-lg" aria-hidden="true"></i>
+                Adicionar
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <aside class="resumo-cotacao" aria-live="polite">
+        <div class="resumo-cotacao-topo">
+          <div>
+            <span>Resumo da cotacao</span>
+            <h3 id="contadorItensCotacao">Nenhum item</h3>
+          </div>
+          <i class="bi bi-basket2" aria-hidden="true"></i>
+        </div>
+
+        <div class="lista-cotacao" id="listaCotacao">
+          <div class="cotacao-vazia">
+            <i class="bi bi-bag-plus" aria-hidden="true"></i>
+            <p>Adicione produtos para calcular uma estimativa.</p>
+          </div>
+        </div>
+
+        <div class="total-cotacao">
+          <span>Total estimado</span>
+          <strong id="totalCotacao">R$ 0,00</strong>
+        </div>
+
+        <button class="btn-enviar-cotacao" id="enviarCotacao" type="button" disabled>
+          <i class="bi bi-send" aria-hidden="true"></i>
+          Enviar cotacao
+        </button>
+
+        <div class="cotacao-feedback" id="cotacaoFeedback" role="status"></div>
+      </aside>
+    </div>
+  </div>
+</section>
+
 <!-- PRODUTORES -->
 <section class="container produtores">
   <h2>Produtores em destaque</h2>
@@ -258,5 +380,6 @@
   </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/script.js"></script>
 </body>
 </html>
