@@ -1,0 +1,31 @@
+.btn-primario {
+  background: var(--verde-escuro);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-primario:hover {
+  background-color: var(--verde-medio);
+}
+
+.btn-secundario {
+  background: transparent;
+  color: var(--verde-musgo); /* #024326 */
+  border: 1.5px solid var(--verde-musgo);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500; /* Inter Medium */
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-secundario:hover {
+  background: var(--verde-fundo);
+}
