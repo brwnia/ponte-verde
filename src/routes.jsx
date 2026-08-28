@@ -1,4 +1,4 @@
-import { Home, Sobre } from '@/pages';
+import { Comprador, Home, Sobre } from '@/pages';
 import { Navigate } from 'react-router';
 
 /** @type {import('react-router').RouteObject[]} */
@@ -14,6 +14,10 @@ const routes = [
   {
     path: '/sobre',
     element: <Sobre />,
+  },
+  {
+    path: '/compradores',
+    element: <Comprador />,
   },
 ];
 
