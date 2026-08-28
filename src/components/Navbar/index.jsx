@@ -28,7 +28,7 @@ export default function Navbar() {
           <ul className="navbar-nav mx-auto">
             <li className={'nav-item ' + styles['nav-item']}>
               <NavLink
-                className={(isActive) =>
+                className={({ isActive }) =>
                   `nav-link ${styles['nav-link']} ${isActive ? styles['active'] : ''}`
                 }
                 to="/home"
@@ -39,8 +39,8 @@ export default function Navbar() {
 
             <li className={'nav-item ' + styles['nav-item']}>
               <NavLink
-                className={(isActive) =>
-                  `nav-link ${styles['nav-link']} ${isActive ? 'active' : ''}`
+                className={({ isActive }) =>
+                  `nav-link ${styles['nav-link']} ${isActive ? styles['active'] : ''}`
                 }
                 to="/sobre"
               >
@@ -50,8 +50,8 @@ export default function Navbar() {
 
             <li className={'nav-item ' + styles['nav-item']}>
               <NavLink
-                className={(isActive) =>
-                  `nav-link ${styles['nav-link']} ${isActive ? 'active' : ''}`
+                className={({ isActive }) =>
+                  `nav-link ${styles['nav-link']} ${isActive ? styles['active'] : ''}`
                 }
                 to="/produtores"
               >
@@ -61,8 +61,8 @@ export default function Navbar() {
 
             <li className={'nav-item ' + styles['nav-item']}>
               <NavLink
-                className={(isActive) =>
-                  `nav-link ${styles['nav-link']} ${isActive ? 'active' : ''}`
+                className={({ isActive }) =>
+                  `nav-link ${styles['nav-link']} ${isActive ? styles['active'] : ''}`
                 }
                 to="/compradores"
               >
@@ -72,8 +72,8 @@ export default function Navbar() {
 
             <li className={'nav-item ' + styles['nav-item']}>
               <NavLink
-                className={(isActive) =>
-                  `nav-link ${styles['nav-link']} ${isActive ? 'active' : ''}`
+                className={({ isActive }) =>
+                  `nav-link ${styles['nav-link']} ${isActive ? styles['active'] : ''}`
                 }
                 to="/faleconosco"
               >
