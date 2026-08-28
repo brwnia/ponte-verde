@@ -1,0 +1,129 @@
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b4d2d, #06361f);
+  position: fixed;
+  left: 0;
+  top: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 18px;
+
+  overflow-y: auto;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  text-decoration: none;
+  color: white;
+}
+
+.logo-area img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.logo-area h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 8px;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8e7de;
+  text-decoration: none;
+  padding: 14px 16px;
+  border-radius: 12px;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+}
+
+.menu a.active {
+  background: #4caf50;
+  color: white;
+  font-weight: 600;
+}
+
+.menu i {
+  font-size: 1rem;
+}
+
+.menu-badge {
+  margin-left: auto;
+  background: #4caf50;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.support-card {
+  margin-top: auto;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 18px;
+}
+
+.support-card h6 {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.support-card p {
+  font-size: 0.9rem;
+  color: #d9e6de;
+}
+
+.support-btn {
+  width: 100%;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    min-height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    max-height: 100vh;
+  }
+}
