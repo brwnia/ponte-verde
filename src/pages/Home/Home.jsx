@@ -15,8 +15,8 @@ const videoDaHome = {
 
 function Banner() {
   return (
-    <section class={styles.banner}>
-      <div class={styles['banner-texto']}>
+    <section className={styles.banner}>
+      <div className={styles['banner-texto']}>
         <h1>
           O Campo mais <br />
           perto do seu
@@ -29,7 +29,7 @@ function Banner() {
           <br />
           Mais praticidade, menos intermediários e preços justos.
         </p>
-        <div class={styles['banner-botoes']}>
+        <div className={styles['banner-botoes']}>
           <Button
             texto="Sou Comprador"
             tipo="primario"
@@ -48,24 +48,26 @@ function Banner() {
           />
         </div>
       </div>
-      <div class={styles['banner-imagem']}>
+      <div className={styles['banner-imagem']}>
         <img src={agricultorImage} alt="agricultor" />
-        <div class={styles['quadrado-estatisticas']}>
-          <div class={styles['estatistica-item']}>
-            <span class={styles['estatistica-numero']}>2.500+</span>
-            <span class={styles['estatistica-label']}>
+        <div className={styles['quadrado-estatisticas']}>
+          <div className={styles['estatistica-item']}>
+            <span className={styles['estatistica-numero']}>2.500+</span>
+            <span className={styles['estatistica-label']}>
               Produtores conectadors
             </span>
           </div>
-          <div class={styles['estatistica-divisor']}></div>
-          <div class={styles['estatistica-item']}>
-            <span class={styles['estatistica-numero']}>1.800+</span>
-            <span class={styles['estatistica-label']}>Empresas atendidas</span>
+          <div className={styles['estatistica-divisor']}></div>
+          <div className={styles['estatistica-item']}>
+            <span className={styles['estatistica-numero']}>1.800+</span>
+            <span className={styles['estatistica-label']}>
+              Empresas atendidas
+            </span>
           </div>
-          <div class={styles['estatistica-divisor']}></div>
-          <div class={styles['estatistica-item']}>
-            <span class={styles['estatistica-numero']}>4.300+</span>
-            <span class={styles['estatistica-label']}>
+          <div className={styles['estatistica-divisor']}></div>
+          <div className={styles['estatistica-item']}>
+            <span className={styles['estatistica-numero']}>4.300+</span>
+            <span className={styles['estatistica-label']}>
               Negocios fortalecidos pelo agro
             </span>
           </div>
@@ -77,13 +79,13 @@ function Banner() {
 
 function SecaoVideo() {
   return (
-    <section id="video" class="py-5">
-      <div class="container">
-        <h2 class="text-center mb-4">Conheça a Ponte Verde</h2>
+    <section id="video" className="py-5">
+      <div className="container">
+        <h2 className="text-center mb-4">Conheça a Ponte Verde</h2>
 
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="ratio ratio-16x9">
+        <div className="row justify-content-center">
+          <div className="col-lg-8">
+            <div className="ratio ratio-16x9">
               <iframe
                 src={videoDaHome.embedUrl}
                 title={videoDaHome.title}
@@ -110,17 +112,19 @@ function SecaoVideo() {
 
 function SecaoCards() {
   return (
-    <section class={styles['secao-cards']}>
+    <section className={styles['secao-cards']}>
       <h2>Junte-se a Ponte Verde</h2>
-      <p class={styles['subtitulo']}>
+      <p className={styles['subtitulo']}>
         Escolha como voce quer fazer parte dessa conexäo que gera valora para
         todos
       </p>
 
-      <div class={styles['grid-cards']}>
+      <div className={styles['grid-cards']}>
         <Card animado>
-          <div class={styles['card-topo'] + ' ' + styles['verde-1']}>🛒</div>
-          <div class={styles['card-corpo']}>
+          <div className={styles['card-topo'] + ' ' + styles['verde-1']}>
+            🛒
+          </div>
+          <div className={styles['card-corpo']}>
             <h3>Sou comprador</h3>
             <p>
               Compre direto de produtores confiáveis com qualidade, preço justo
@@ -131,8 +135,10 @@ function SecaoCards() {
         </Card>
 
         <Card animado>
-          <div class={styles['card-topo'] + ' ' + styles['verde-2']}>🌿</div>
-          <div class={styles['card-corpo']}>
+          <div className={styles['card-topo'] + ' ' + styles['verde-2']}>
+            🌿
+          </div>
+          <div className={styles['card-corpo']}>
             <h3>Sou produtor</h3>
             <p>
               Venda seus produtos para diversos negócios e aumente sua renda.
@@ -146,8 +152,10 @@ function SecaoCards() {
         </Card>
 
         <Card animado>
-          <div class={styles['card-topo'] + ' ' + styles['verde-3']}>👩‍🍳</div>
-          <div class={styles['card-corpo']}>
+          <div className={styles['card-topo'] + ' ' + styles['verde-3']}>
+            👩‍🍳
+          </div>
+          <div className={styles['card-corpo']}>
             <h3>Sou restaurante ou mercado</h3>
             <p>
               Abasteça seu negócio com produtos frescos, saudáveis e entregues
@@ -158,8 +166,10 @@ function SecaoCards() {
         </Card>
 
         <Card animado>
-          <div class={styles['card-topo'] + ' ' + styles['verde-4']}>🚚</div>
-          <div class={styles['card-corpo']}>
+          <div className={styles['card-topo'] + ' ' + styles['verde-4']}>
+            🚚
+          </div>
+          <div className={styles['card-corpo']}>
             <h3>Sou transportador</h3>
             <p>
               Faça parte dessa rede de entregas e conecte o campo a quem
@@ -179,31 +189,31 @@ function SecaoCards() {
 
 function HomeFooter() {
   return (
-    <section class={styles['rodape']}>
-      <div class={styles['feature']}>
-        <div class={styles['feature-icone']}>🛡️</div>
-        <div class={styles['feature-texto']}>
+    <section className={styles['rodape']}>
+      <div className={styles['feature']}>
+        <div className={styles['feature-icone']}>🛡️</div>
+        <div className={styles['feature-texto']}>
           <h4>Negociação segura</h4>
           <p>Ambiente protegido para compradores e produtores.</p>
         </div>
       </div>
-      <div class={styles['feature']}>
-        <div class={styles['feature-icone']}>🤝</div>
-        <div class={styles['feature-texto']}>
+      <div className={styles['feature']}>
+        <div className={styles['feature-icone']}>🤝</div>
+        <div className={styles['feature-texto']}>
           <h4>Conexão direta</h4>
           <p>Menos intermediários, mais valor para todos.</p>
         </div>
       </div>
-      <div class={styles['feature']}>
-        <div class={styles['feature-icone']}>🌱</div>
-        <div class={styles['feature-texto']}>
+      <div className={styles['feature']}>
+        <div className={styles['feature-icone']}>🌱</div>
+        <div className={styles['feature-texto']}>
           <h4>Sustentável</h4>
           <p>Fortalecemos o agro e incentivamos o local.</p>
         </div>
       </div>
-      <div class={styles['feature']}>
-        <div class={styles['feature-icone']}>🎧</div>
-        <div class={styles['feature-texto']}>
+      <div className={styles['feature']}>
+        <div className={styles['feature-icone']}>🎧</div>
+        <div className={styles['feature-texto']}>
           <h4>Suporte dedicado</h4>
           <p>Nosso time está sempre pronto para ajudar.</p>
         </div>
