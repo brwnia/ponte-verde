@@ -1,19 +1,12 @@
-@import "./style-common.css";
-
-body {
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f6f7f3;
-  color: #173f2d;
-}
-
-a {
-  text-decoration: none;
-}
-
 /* ================= MAIN ================= */
 
 .main-section {
   padding: 70px 0;
+}
+
+:has(.main-section) {
+  background-color: #f6f7f3;
+  color: #173f2d;
 }
 
 .hero-title {
@@ -63,7 +56,7 @@ a {
   background: white;
   padding: 35px;
   border-radius: 22px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .form-title {
@@ -82,7 +75,7 @@ a {
 .form-control:focus,
 .form-select:focus {
   border-color: #3d8c5b;
-  box-shadow: 0 0 0 0.2rem rgba(61,140,91,0.15);
+  box-shadow: 0 0 0 0.2rem rgba(61, 140, 91, 0.15);
 }
 
 .btn-send {
@@ -116,7 +109,7 @@ a {
   background: white;
   padding: 25px;
   border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
   height: 100%;
 }
 
@@ -138,78 +131,3 @@ a {
   margin-bottom: 10px;
   color: #124734;
 }
-
-/* ================= FOOTER ================= */
-
-footer {
-  background: #173f2d;
-  color: white;
-  margin-top: 80px;
-  padding-top: 60px;
-}
-
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.footer-description {
-  color: rgba(255,255,255,0.75);
-  line-height: 1.7;
-}
-
-.footer-title {
-  font-weight: 700;
-  margin-bottom: 20px;
-  font-size: 1.1rem;
-}
-
-.footer-links a {
-  display: block;
-  color: rgba(255,255,255,0.75);
-  margin-bottom: 12px;
-  transition: 0.3s;
-}
-
-.footer-links a:hover {
-  color: white;
-  transform: translateX(5px);
-}
-
-.social-icons {
-  display: flex;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.social-icons a {
-  width: 42px;
-  height: 42px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  background: #3d8c5b;
-  transform: translateY(-3px);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  margin-top: 50px;
-  padding: 20px 0;
-  text-align: center;
-  color: rgba(255,255,255,0.7);
-  font-size: 0.95rem;
-}
-
-

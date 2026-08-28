@@ -1,4 +1,4 @@
-import { Compradores, Home, Produtores, Sobre } from '@/pages';
+import { Compradores, FaleConosco, Home, Produtores, Sobre } from '@/pages';
 import { Navigate } from 'react-router';
 
 /** @type {import('react-router').RouteObject[]} */
@@ -22,6 +22,10 @@ const routes = [
   {
     path: '/produtores',
     element: <Produtores />,
+  },
+  {
+    path: '/faleconosco',
+    element: <FaleConosco />,
   },
 ];
 
