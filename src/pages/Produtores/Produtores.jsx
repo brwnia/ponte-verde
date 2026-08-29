@@ -168,6 +168,30 @@ function ItemsTable() {
 }
 
 function ModalProducao() {
+  const [quantidade, setQuantidade] = React.useState(0);
+  const [preco, setPreco] = React.useState(0);
+
+  const [receitaBruta, setReceitaBruta] = React.useState(0);
+  const [taxa, setTaxa] = React.useState(0);
+  const [receitaLiquida, setReceitaLiquida] = React.useState(0);
+
+  const formatarMoeda = (valor) => {
+    return valor.toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    });
+  };
+
+  const calcularReceita = () => {
+    const novaReceitaBruta = quantidade * preco;
+    const novaTaxa = novaReceitaBruta * 0.05;
+    const novaReceitaLiquida = novaReceitaBruta - novaTaxa;
+
+    setReceitaBruta(novaReceitaBruta);
+    setTaxa(novaTaxa);
+    setReceitaLiquida(novaReceitaLiquida);
+  };
+
   return (
     <div className="modal fade" id="receitaModal" tabindex="-1">
       <div className="modal-dialog modal-dialog-centered">
@@ -197,6 +221,8 @@ function ModalProducao() {
                 type="number"
                 id="quantidade"
                 className={'form-control' + ` ${styles['form-control']}`}
+                value={quantidade}
+                onChange={(e) => setQuantidade(e.target.value)}
               />
             </div>
 
@@ -209,12 +235,14 @@ function ModalProducao() {
                 id="preco"
                 className={'form-control' + ` ${styles['form-control']}`}
                 step="0.01"
+                value={preco}
+                onChange={(e) => setPreco(e.target.value)}
               />
             </div>
 
             <button
               className={`btn ${styles['btn-green']} w-100`}
-              onclick="calcularReceita()"
+              onClick={calcularReceita}
             >
               Calcular Receita
             </button>
@@ -222,19 +250,19 @@ function ModalProducao() {
             <div className={styles['resultado-grid']}>
               <div className={styles['resultado-card']}>
                 <span>Receita Bruta</span>
-                <h4 id="receitaBruta">R$ 0,00</h4>
+                <h4 id="receitaBruta">{formatarMoeda(receitaBruta)}</h4>
               </div>
 
               <div className={styles['resultado-card']}>
                 <span>Taxa Ponte Verde (5%)</span>
-                <h4 id="taxa">R$ 0,00</h4>
+                <h4 id="taxa">{formatarMoeda(taxa)}</h4>
               </div>
 
               <div
                 className={styles['resultado-card'] + ' ' + styles['destaque']}
               >
                 <span>Receita Líquida</span>
-                <h4 id="receitaLiquida">R$ 0,00</h4>
+                <h4 id="receitaLiquida">{formatarMoeda(receitaLiquida)}</h4>
               </div>
             </div>
           </div>
