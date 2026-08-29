@@ -1,0 +1,18 @@
+.card {
+  background: #fff;
+  border: 1px solid var(--verde-borda);
+  border-radius: 12px;
+  overflow: hidden;
+  min-width: 0;
+  word-break: break-word;
+  text-align: left;
+}
+.card.animated {
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.card.animated:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(2, 67, 38, 0.1);
+}
