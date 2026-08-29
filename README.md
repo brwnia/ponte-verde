@@ -16,12 +16,21 @@
 <hr>
 
 ### Resumo geral
-O Ponte Verde conecta produtores rurais diretamente a compradores como restaurantes, mercados e empresas, facilitando a negociação, reduzindo intermediários e garantindo produtos frescos com preços mais justos. 
+
+O Ponte Verde conecta produtores rurais diretamente a compradores como restaurantes, mercados e empresas, facilitando a negociação, reduzindo intermediários e garantindo produtos frescos com preços mais justos.
 
 ### Tecnologias utilizadas
-Com base no que é ensinado no 1º ano de Engenharia de Software da **FIAP**, nós utilizamos das principais tecnologias:
-- HTML para a estruturação das páginas web;
-- CSS para a estilização;
-- e Javascript para variados comportamentos.
 
-Mas além disso, também utilizamos derivados permitidos para um resultado mais satisfatório e alinhado com nossas expectativas. Este seria o caso do **Bootstrap**, que nos auxilia com a estilização.
+Com base no que é ensinado no 1º ano de Engenharia de Software da **FIAP**, o projeto foi desenvolvido com **React**, utilizando a biblioteca para a criação de interfaces dinâmicas e reutilizáveis.
+
+Além disso, também utilizamos tecnologias complementares para um resultado mais satisfatório e alinhado com nossas expectativas, como **CSS Modules** para a estilização e **JavaScript** para a lógica e interações da aplicação.
+
+### Rodando o projeto
+
+Para rodar o projeto em desenvolvimento, use o seguinte código no terminal:
+
+```bash
+npm run dev  # (Necessário ter o Node instalado)
+```
+
+Para alterar configurações como a porta de servidor do front, use o `.env.sample` que oferecemos. Copie-o para um `.env` e altere a configuração como preferir. Assim que o servidor for reiniciado, esse novo .env será usado.
