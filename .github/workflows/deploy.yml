@@ -27,6 +27,9 @@ jobs:
       - name: Gerar build de produção
         run: npm run build
 
+      - name: Configure SPA fallback
+        run: cp dist/index.html dist/404.html
+
       - name: Fazer o Deploy para o GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
