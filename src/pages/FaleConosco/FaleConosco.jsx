@@ -6,6 +6,48 @@ import styles from './FaleConosco.module.css';
 
 import centralImage from '@/assets/img/central.png';
 
+// Erros
+function mostrarErro(campoRef, mensagemErro) {
+  const errorElement = document.getElementById(campoRef.current.id + 'Error');
+
+  errorElement.style.display = 'block';
+  errorElement.innerText = mensagemErro;
+  campoRef.current.classList.add('is-invalid');
+}
+
+function limparErro(campoRef) {
+  const errorElement = document.getElementById(campoRef.current.id + 'Error');
+
+  errorElement.style.display = 'none';
+  errorElement.innerText = '';
+  campoRef.current.classList.remove('is-invalid');
+}
+
+// Validação
+function validarNome(nomeTexto) {
+  const partesNome = nomeTexto.trim().split(/\s+/);
+  const contemApenasLetras = /^[A-Za-z\u00C0-\u00FF'-]+$/;
+
+  if (partesNome.length < 2) {
+    return false;
+  }
+
+  const primeiroNome = partesNome[0];
+  const sobrenome = partesNome[partesNome.length - 1];
+
+  return (
+    primeiroNome.length >= 2 &&
+    sobrenome.length >= 2 &&
+    partesNome.every((parte) => contemApenasLetras.test(parte))
+  );
+}
+
+function validarEmail(emailTexto) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return regex.test(emailTexto.trim());
+}
+
 function LeftSecttion() {
   return (
     <div className="col-lg-5 left-content">
@@ -62,17 +104,98 @@ function LeftSecttion() {
 }
 
 function RightSection() {
+  const [nome, setNome] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [assunto, setAssunto] = React.useState('');
+  const [mensagem, setMensagem] = React.useState('');
+  const [showSuccessMessage, setShowSuccessMessage] = React.useState(false);
+
+  const nomeCampoRef = React.useRef(null);
+  const emailCampoRef = React.useRef(null);
+  const assuntoCampoRef = React.useRef(null);
+  const mensagemCampoRef = React.useRef(null);
+
+  const limiteMensagem = 500;
+
+  const validarFormulario = () => {
+    let valido = true;
+
+    [nomeCampoRef, emailCampoRef, assuntoCampoRef, mensagemCampoRef].forEach(
+      limparErro,
+    );
+
+    // Nome
+    if (nome.trim() === '') {
+      mostrarErro(nomeCampoRef, 'O nome completo \u00E9 obrigat\u00F3rio.');
+      valido = false;
+    } else if (!validarNome(nome)) {
+      mostrarErro(
+        nomeCampoRef,
+        'Informe nome e sobrenome com pelo menos 2 caracteres cada.',
+      );
+      valido = false;
+    }
+
+    // Email
+    if (email.trim() === '') {
+      mostrarErro(emailCampoRef, 'O e-mail \u00E9 obrigat\u00F3rio.');
+      valido = false;
+    } else if (!validarEmail(email)) {
+      mostrarErro(emailCampoRef, 'Digite um e-mail v\u00E1lido.');
+      valido = false;
+    }
+
+    // Assunto
+    if (assunto === '') {
+      mostrarErro(assuntoCampoRef, 'Selecione um assunto.');
+      valido = false;
+    }
+
+    // Mensagem
+    if (mensagem.trim() === '') {
+      mostrarErro(mensagemCampoRef, 'A mensagem \u00E9 obrigat\u00F3ria.');
+      valido = false;
+    } else if (mensagem.length > limiteMensagem) {
+      mostrarErro(
+        mensagemCampoRef,
+        `A mensagem deve ter no m\u00E1ximo ${limiteMensagem} caracteres.`,
+      );
+      valido = false;
+    }
+
+    return valido;
+  };
+
+  const submitFormulario = (e) => {
+    e.preventDefault();
+
+    setShowSuccessMessage(false);
+
+    if (!validarFormulario()) {
+      return;
+    }
+
+    setShowSuccessMessage(true);
+    setNome('');
+    setEmail('');
+    setAssunto('');
+    setMensagem('');
+
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 4000);
+  };
+
   return (
     <div className="col-lg-7">
       <div className={styles['contact-card']}>
         <h3 className={styles['form-title']}>Envie sua mensagem</h3>
 
-        <form id="contactForm" novalidate>
+        <form id="contactForm" noValidate onSubmit={submitFormulario}>
           <div className="row">
             <div className="col-md-6 mb-3">
               <label className={styles['form-label'] + ' form-label'}>
-                {' '}
-                Nome completo{' '}
+                Nome completo
               </label>
 
               <input
@@ -80,6 +203,9 @@ function RightSection() {
                 className={styles['form-control'] + ' form-control'}
                 id="nome"
                 placeholder="Digite seu nome"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
+                ref={nomeCampoRef}
               />
 
               <div className={styles['error-message']} id="nomeError"></div>
@@ -87,8 +213,7 @@ function RightSection() {
 
             <div className="col-md-6 mb-3">
               <label className={styles['form-label'] + ' form-label'}>
-                {' '}
-                E-mail{' '}
+                E-mail
               </label>
 
               <input
@@ -96,6 +221,9 @@ function RightSection() {
                 className={styles['form-control'] + ' form-control'}
                 id="email"
                 placeholder="seu@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                ref={emailCampoRef}
               />
 
               <div className={styles['error-message']} id="emailError"></div>
@@ -104,13 +232,15 @@ function RightSection() {
 
           <div className="mb-3">
             <label className={styles['form-label'] + ' form-label'}>
-              {' '}
-              Assunto{' '}
+              Assunto
             </label>
 
             <select
               className={styles['form-select'] + ' form-select'}
               id="assunto"
+              value={assunto}
+              onChange={(e) => setAssunto(e.target.value)}
+              ref={assuntoCampoRef}
             >
               <option value="">Selecione um assunto</option>
               <option>Dúvida</option>
@@ -124,8 +254,7 @@ function RightSection() {
 
           <div className="mb-3">
             <label className={styles['form-label'] + ' form-label'}>
-              {' '}
-              Mensagem{' '}
+              Mensagem
             </label>
 
             <textarea
@@ -133,10 +262,19 @@ function RightSection() {
               id="mensagem"
               rows="6"
               placeholder="Escreva sua mensagem aqui..."
+              value={mensagem}
+              onChange={(e) => setMensagem(e.target.value)}
+              ref={mensagemCampoRef}
             ></textarea>
 
             <div className="d-flex justify-content-end text-muted small mt-1">
-              <span id="mensagemCounter">0/500 caracteres</span>
+              <span
+                className={
+                  mensagem.length > limiteMensagem ? 'text-danger' : ''
+                }
+              >
+                {mensagem.length}/{limiteMensagem} caracteres
+              </span>
             </div>
 
             <div className={styles['error-message']} id="mensagemError"></div>
@@ -152,7 +290,7 @@ function RightSection() {
 
           <div
             className={'alert alert-success ' + styles['success-message']}
-            id="successMessage"
+            style={{ display: showSuccessMessage ? 'block' : 'none' }}
           >
             Mensagem enviada com sucesso!
           </div>
