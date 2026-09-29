@@ -52,7 +52,7 @@ function CardProduto({ produto, itensCotacao, setItensCotacao, showFeedback }) {
       className={styles['produto-cotacao-card']}
       data-id={produto.id}
       data-nome={produto.nome}
-      data-produtor={produto.produtor}
+      data-produtor={produto.produtor.nome}
       data-preco={produto.preco}
       data-unidade={produto.unidade}
     >
@@ -60,9 +60,11 @@ function CardProduto({ produto, itensCotacao, setItensCotacao, showFeedback }) {
         <img src={produto.imagem} alt={produto.nome} />
       </div>
       <div className={styles['produto-cotacao-info']}>
-        <span className={styles['produto-categoria']}>{produto.categoria}</span>
+        <span className={styles['produto-categoria']}>
+          {produto.categoria.nome}
+        </span>
         <h3>{produto.nome}</h3>
-        <p>{produto.produtor}</p>
+        <p>{produto.produtor.nome}</p>
         <div className={styles['produto-cotacao-rodape']}>
           <strong>
             {formatarMoeda(produto.preco)}/{produto.unidade}
@@ -109,7 +111,7 @@ function ItemCotacao({ produtos, item, setItensCotacao, showFeedback }) {
         <div>
           <h4>{produtoInfo.nome}</h4>
           <p>
-            {produtoInfo.produtor} - {formatarMoeda(produtoInfo.preco)}/
+            {produtoInfo.produtor.nome} - {formatarMoeda(produtoInfo.preco)}/
             {produtoInfo.unidade}
           </p>
         </div>
