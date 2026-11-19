@@ -250,3 +250,84 @@
     width: 100%;
   }
 }
+
+/* ================= MODAL DE PRODUTO ================= */
+
+.modal-backdrop-custom {
+  position: fixed;
+  inset: 0;
+  z-index: 1040;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+}
+
+.modal-produto {
+  position: fixed;
+  z-index: 1050;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(550px, calc(100% - 30px));
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.18);
+}
+
+.modal-produto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 25px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.modal-produto-header h5 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #123d2a;
+}
+
+.modal-produto-body {
+  padding: 22px 25px;
+}
+
+.modal-produto-body label {
+  color: #123d2a;
+  font-weight: 600;
+}
+
+.modal-produto-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 18px 25px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.modal-produto-footer button {
+  border-radius: 10px;
+  padding: 10px 16px;
+}
+
+.modal-produto .btn-green {
+  background: #198754;
+  color: white;
+  border: none;
+}
+
+.modal-produto .btn-green:hover {
+  background: #146c43;
+}
+
+@media (max-width: 576px) {
+  .modal-produto-footer {
+    flex-direction: column-reverse;
+  }
+
+  .modal-produto-footer button {
+    width: 100%;
+  }
+}
