@@ -9,7 +9,7 @@ import Button from '@/components/Button';
 import Card from '@/components/Card';
 
 const videoDaHome = {
-  embedUrl: 'https://www.youtube.com/watch?v=PlGNBH3Qz4A',
+  embedUrl: 'https://youtu.be/PlGNBH3Qz4A?si=jQp2Z8zYVyWwc7f2',
   title: 'Vídeo Institucional',
 };
 
